@@ -1,16 +1,31 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as charactersActions from '../actions/charactersActions';
+
 import '../styles/Filters.css';
 
-const Filters = () => {
+const Filters = (props) => {
+  const { sortCharacters } = props;
+
+  const handleClick = (mode) => {
+    sortCharacters(mode)
+  }
   return (
     <div className="filters padding">
       <p>Ordenar por: </p>
-      <button type="button">Nombre</button>
-      <button type="button">Poder</button>
-      <button type="button">Debilidad</button>
-      <button type="button">Peso</button>
+      <button type="button" onClick={() => {handleClick('name')}}>Nombre</button>
+      <button type="button" onClick={() => {handleClick('exp')}}>Experiencia</button>
+      <button type="button" onClick={() => {handleClick('weight')}}>Peso</button>
+      <button type="button" onClick={() => {handleClick('height')}}>Altura</button>
+      <button type="button" onClick={() => {handleClick('default')}}>Default</button>
     </div>
   );
 };
 
-export default Filters;
+const mapStateToProps = ({ charactersReducer }) => ({ charactersReducer });
+
+const mapDispatchToProps = {
+  ...charactersActions,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Filters);
