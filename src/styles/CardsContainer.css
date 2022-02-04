@@ -1,4 +1,5 @@
 .cards-container {
+    animation: fadeIn 0.5s ease-in-out;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 250px));
     grid-gap: 24px;
@@ -7,6 +8,23 @@
 }
 
 .container__empty {
-    height: calc(100vh - 84px);
+    color: var(--blue-dark);
+    font-size: var(--md);
+    text-align: center;
+    height: calc(100vh - 159px);
     width: 100%;
+}
+
+.container__empty h2 {
+    margin: 32px 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

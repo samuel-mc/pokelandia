@@ -4,10 +4,10 @@ import Card from './Card';
 import '../styles/CardsContainer.css';
 
 const EmptyContainer = ({ searchParam }) => (
-  <section className="container__empty padding">
-    <h2>¡No hay personajes que se llamen "{searchParam}"!</h2>
+  <main className="container__empty padding">
+    <h2>¡No hay personajes que se llamen {searchParam} !</h2>
     <h3>Prueba con otro nombre.</h3>
-  </section>
+  </main>
 )
 
 const CardsContainer = (props) => {
@@ -23,7 +23,7 @@ const CardsContainer = (props) => {
     {/* // loading && <h2>Cargando...</h2>,
     // error && <h2>Error!</h2>, */}
     {
-      characters.length === 0 
+      filtered.length === 0
       ? <EmptyContainer searchParam={searchParam} />
       : <main className="cards-container padding">
           {loading && <h2>Cargando...</h2>}
@@ -34,9 +34,7 @@ const CardsContainer = (props) => {
               <Card key={character.id} character={character} />
             ))
           }
-    
         </main>
-
     }
     </>
   );

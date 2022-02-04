@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-// eslint-disable-next-line import/prefer-default-export
 export const fetchCharacters = () => async (dispatch) => {
   let characters = [];
   dispatch({
@@ -29,3 +28,37 @@ export const fetchCharacters = () => async (dispatch) => {
     });
   }
 };
+
+export const sortCharacters = (orderBy) => (dispatch) => {
+  console.log(orderBy);
+  switch (orderBy) {
+    case 'name':
+      dispatch({
+        type: 'SORT_BY_NAME',
+      });
+      break;
+    case 'exp':
+      dispatch({
+        type: 'SORT_BY_EXP',
+      });
+      break;
+    case 'weight':
+      dispatch({
+        type: 'SORT_BY_WEIGHT',
+      });
+      break;
+    case 'height':
+      dispatch({
+        type: 'SORT_BY_HEIGHT',
+      });
+      break;
+    case 'default':
+      dispatch({
+        type: 'SORT_BY_DEFAULT',
+      });
+      break;
+    default:
+      break;
+
+  }
+}

@@ -51,6 +51,30 @@ header {
     opacity: 1;
 }
 
+.button__favs {
+    font-size: var(--md);
+    background-color: var(--red);
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    cursor: pointer;
+    height: 32px;
+    width: 132px;
+    transition: var(--transition-out);
+}
+
+.button__favs:hover {
+    opacity: 0.5;
+    transition: var(--transition-in);
+}
+
+
+
+.button__favs svg {
+    height: var(--md);
+    margin-left: 8px;
+    opacity: 0.5;
+}
 @media (min-width: 320px) {
     header {
         align-items: center;

@@ -11,3 +11,18 @@ export const clearSearchParam = () => (dispatch) => {
     payload: '',
   });
 };
+
+export const addToLikedCharacters = (character) => (dispatch) => {
+  dispatch({
+    type: 'ADD_TO_LIKED_CHARACTERS',
+    payload: character,
+  });
+};
+
+export const removeFromLikedCharacters = (id) => (dispatch) => {
+  dispatch({
+    type: 'REMOVE_FROM_LIKED_CHARACTERS',
+    payload: id,
+  });
+}
+
