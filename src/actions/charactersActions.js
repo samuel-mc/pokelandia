@@ -59,6 +59,5 @@ export const sortCharacters = (orderBy) => (dispatch) => {
       break;
     default:
       break;
-
   }
-}
+};

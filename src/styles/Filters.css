@@ -11,7 +11,7 @@
     border: none;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
-    color: var(--white);
+    color: var(--light);
     font-size: var(--md);
     padding: 8px 12px;
     margin: 4px;

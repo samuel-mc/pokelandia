@@ -1,6 +1,7 @@
 const INITIAL_STATE = {
   searchParam: '',
   likedCharacters: [],
+  showFavorites: false,
 };
 
 // eslint-disable-next-line default-param-last
@@ -22,6 +23,11 @@ export default (state = INITIAL_STATE, action) => {
         likedCharacters: state.likedCharacters.filter(
           (character) => character.id !== action.payload
         ),
+      };
+    case 'TOGGLE_FAVORITES':
+      return {
+        ...state,
+        showFavorites: !state.showFavorites,
       };
     default:
       return state;

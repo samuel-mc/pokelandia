@@ -24,5 +24,10 @@ export const removeFromLikedCharacters = (id) => (dispatch) => {
     type: 'REMOVE_FROM_LIKED_CHARACTERS',
     payload: id,
   });
-}
+};
 
+export const toggleFavorites = () => (dispatch) => {
+  dispatch({
+    type: 'TOGGLE_FAVORITES',
+  });
+};

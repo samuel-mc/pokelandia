@@ -4,7 +4,8 @@
     --blue-md: #1B65A6;
     --blue-light: #4AB0D9;
     --red: #D90D32;
-    --white: #F2E6D8;
+    --light: #F2E6D8;
+    --white: #f5f5f5;
 
     /* Tamaños de fuente */
     --sm: 1.2rem;
@@ -37,7 +38,13 @@ html {
 }
 
 .app {
-    background-color: var(--white);
+    background-color: var(--light);
+    position: relative;
+}
+
+.stop-scrolling {
+    height: 100vh;
+    overflow: hidden;
 }
 
 @media (min-width: 320px) {

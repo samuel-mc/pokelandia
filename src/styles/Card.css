@@ -1,6 +1,5 @@
 .card {
     animation: fadeIn 0.5s ease-in-out;
-    border: 1px solid var(--blue-dark);
     border-radius: 12px 4px 12px 8px;
     box-shadow: var(--box-shadow);
     text-align: center;
@@ -9,7 +8,7 @@
 .card__header {
     background-color: var(--blue-dark);
     border-radius: 8px 2px 0 0;
-    color: var(--white);
+    color: var(--light);
     font-size: var(--lg);
     padding: 12px;
     margin: 0;
@@ -23,11 +22,12 @@
 
 .card__image {
     align-items: center;
-    border-radius: 0 0 8px 4px;
+    background-color: var(--white);
+    border-radius: 0 0 12px 8px;
     display: flex;
     height: 250px;
     justify-content: center;
-    width: 150px;
+    width: 100%px;
     margin: 0 auto;
 }
 
@@ -42,7 +42,7 @@
     border-radius: 0 0 8px 4px;
     box-shadow: inset -4px -4px 16px rgba(255, 255, 255, 0.15),
         inset 4px -4px 16px rgba(255, 255, 255, 0.15);
-    color: var(--white);
+    color: var(--light);
     font-size: var(--md);
     position: absolute;
     left: 0;
@@ -88,7 +88,7 @@
 .like__button {
     background-color: rgba(0, 0, 0, 0);
     border: none;
-    color: var(--white);
+    color: var(--light);
     cursor: pointer;
     height: 32px;
     padding: 0;
@@ -110,7 +110,7 @@
     align-items: center;
     background-color: var(--blue-md);
     border: none;
-    color: var(--white);
+    color: var(--light);
     font-size: var(--md);
     padding: 8px;
     display: flex;
@@ -121,7 +121,7 @@
 
 .button__show-more:hover {
     background-color: var(--blue-dark);
-    color: var(--white);
+    color: var(--light);
     cursor: pointer;
     transition: var(--transition-in);
 }
