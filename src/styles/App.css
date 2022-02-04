@@ -1,0 +1,48 @@
+:root {
+    /* Variables de colores */
+    --blue-dark: #1E1D40;
+    --blue-md: #1B65A6;
+    --blue-light: #4AB0D9;
+    --red: #D90D32;
+    --white: #F2E6D8;
+
+    /* Tamaños de fuente */
+    --sm: 1.2rem;
+    --md: 1.6rem;
+    --lg: 2.0rem;
+    --xl: 3.2rem;
+
+    /* Font Family */
+    --font-family: 'Roboto', sans-serif;
+
+    /* Box Shadow */
+    --box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-family);
+}
+
+.app {
+    background-color: var(--white);
+}
+
+@media (min-width: 320px) {
+    .padding {
+        padding: 8px 32px;
+    }
+}
+
+@media (min-width: 768px) {
+    .padding {
+        padding: 16px 64px;
+    }
+}

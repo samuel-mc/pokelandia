@@ -1,0 +1,26 @@
+.filters {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--md);
+    justify-content: center;
+}
+
+.filters > button {
+    background: var(--blue-md);
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    color: var(--white);
+    font-size: var(--md);
+    padding: 8px 12px;
+    margin: 4px;
+    transition: all 0.6s ease-in-out;
+
+}
+
+.filters > button:hover {
+    background-color: var(--blue-dark);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
