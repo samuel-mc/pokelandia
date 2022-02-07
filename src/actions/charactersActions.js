@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// Funcion para obtener los personajes de la base de datos.
 export const fetchCharacters = () => async (dispatch) => {
   let characters = [];
   dispatch({
@@ -7,7 +8,9 @@ export const fetchCharacters = () => async (dispatch) => {
   });
   try {
     // Llamada a la API, para obtener el nombre y el url
-    const response = await axios.get('https://pokeapi.co/api/v2/pokemon/');
+    const response = await axios.get(
+      'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=28'
+    );
     characters = response.data.results;
     // Iteración a cada elemento del arreglo de resultados para obtener los datos completos
     const charactersAux = await Promise.all(
@@ -16,7 +19,6 @@ export const fetchCharacters = () => async (dispatch) => {
         return res.data;
       })
     );
-
     dispatch({
       type: 'FETCH_CHARACTERS_SUCCESS',
       payload: charactersAux,
@@ -29,27 +31,27 @@ export const fetchCharacters = () => async (dispatch) => {
   }
 };
 
-export const sortCharacters = (orderBy) => (dispatch) => {
-  console.log(orderBy);
+// Funcion para modificar el orden en el que se muestran los personajes.
+export const sortCharacters = (orderBy, order) => (dispatch) => {
   switch (orderBy) {
     case 'name':
       dispatch({
-        type: 'SORT_BY_NAME',
+        type: order === 'asc' ? 'SORT_BY_NAME_ASC' : 'SORT_BY_NAME_DESC',
       });
       break;
     case 'exp':
       dispatch({
-        type: 'SORT_BY_EXP',
+        type: order === 'asc' ? 'SORT_BY_EXP_ASC' : 'SORT_BY_EXP_DESC',
       });
       break;
     case 'weight':
       dispatch({
-        type: 'SORT_BY_WEIGHT',
+        type: order === 'asc' ? 'SORT_BY_WEIGHT_ASC' : 'SORT_BY_WEIGHT_DESC',
       });
       break;
     case 'height':
       dispatch({
-        type: 'SORT_BY_HEIGHT',
+        type: order === 'asc' ? 'SORT_BY_HEIGHT_ASC' : 'SORT_BY_HEIGHT_DESC',
       });
       break;
     case 'default':

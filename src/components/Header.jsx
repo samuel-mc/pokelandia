@@ -13,7 +13,7 @@ const Header = (props) => {
     clearSearchParam,
     toggleFavorites,
   } = props;
-  const { searchParam } = interactionReducer;
+  const { searchParam, likedCharacters } = interactionReducer;
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -85,7 +85,7 @@ const Header = (props) => {
           className="button__favs"
           onClick={() => handleToggleFavorites()}
         >
-          Tus Favoritos
+          Tus Favoritos ({likedCharacters.length})
           <span>
             <svg
               aria-hidden="true"

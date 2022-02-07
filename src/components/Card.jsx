@@ -167,7 +167,9 @@ const Card = (props) => {
         </div>
 
         <footer className="card__footer">
-          {sortBy === 'exp' && <h3>Experiencia: {character.base_experience}</h3>}
+          {sortBy === 'exp' && (
+            <h3>Experiencia: {character.base_experience}</h3>
+          )}
           {sortBy === 'weight' && <h3>Peso: {character.weight}</h3>}
           {sortBy === 'height' && <h3>Altura: {character.height}</h3>}
         </footer>

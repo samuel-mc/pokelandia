@@ -3,6 +3,7 @@ const INITIAL_STATE = {
   likedCharacters: [],
   showFavorites: false,
   sortBy: 'default',
+  order: 'asc',
 };
 
 // eslint-disable-next-line default-param-last
@@ -34,6 +35,11 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         sortBy: action.payload,
+      };
+    case 'SET_ORDER':
+      return {
+        ...state,
+        order: action.payload,
       };
     default:
       return state;
