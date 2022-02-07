@@ -1,8 +1,8 @@
 :root {
     /* Variables de colores */
-    --blue-dark: #1E1D40;
-    --blue-md: #1B65A6;
-    --blue-light: #4AB0D9;
+    --dark-blue: #1E1D40;
+    --md-blue: #1B65A6;
+    --light-blue: #4AB0D9;
     --red: #D90D32;
     --light: #F2E6D8;
     --white: #f5f5f5;
@@ -56,5 +56,14 @@ html {
 @media (min-width: 768px) {
     .padding {
         padding: 16px 64px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

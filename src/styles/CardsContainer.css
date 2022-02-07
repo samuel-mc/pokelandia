@@ -8,7 +8,7 @@
 }
 
 .container__empty {
-    color: var(--blue-dark);
+    color: var(--dark-blue);
     font-size: var(--md);
     text-align: center;
     height: calc(100vh - 159px);
@@ -20,7 +20,7 @@
 }
 
 .container__charging {
-  color: var(--blue-dark);
+  color: var(--dark-blue);
   display: flex;
   flex-direction: column;
   justify-content: center;

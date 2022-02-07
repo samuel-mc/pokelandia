@@ -7,7 +7,7 @@
 }
 
 .filters > button {
-    background: var(--blue-md);
+    background: var(--md-blue);
     border: none;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
@@ -20,7 +20,7 @@
 }
 
 .filters > button:hover {
-    background-color: var(--blue-dark);
+    background-color: var(--dark-blue);
     cursor: pointer;
     transition: var(--transition-in);
 }

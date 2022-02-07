@@ -16,6 +16,9 @@ const Favorites = (props) => {
     toggleFavorites();
   };
 
+  const firstUppercase = (word) =>
+    word.split('')[0].toUpperCase() + word.slice(1);
+
   return (
     <aside className="favorites">
       <header>
@@ -31,7 +34,37 @@ const Favorites = (props) => {
               src={character.sprites.other.dream_world.front_default}
               alt=""
             />
-            <p>{character.name}</p>
+            <div>
+              <h1>{character.name}</h1>
+              <ul>
+                <li>
+                  <span>Tipo: </span>
+                  {character.types
+                    .map((type) => firstUppercase(type.type.name))
+                    .join(', ')}
+                </li>
+                <li>
+                  <span>Habilidades: </span>
+                  {character.abilities
+                    .map((ability) => firstUppercase(ability.ability.name))
+                    .join(', ')}
+                </li>
+                <li>
+                  {' '}
+                  <span>Experiencia: </span>
+                  {character.base_experience}
+                </li>
+                <li>
+                  <span>Peso: </span>
+                  {character.weight}
+                </li>
+                <li>
+                  <span>Altura: </span>
+                  {character.height}
+                </li>
+              </ul>
+
+            </div>
             <button type="button" onClick={() => handleRemove(character)}>
               <span>
                 <svg

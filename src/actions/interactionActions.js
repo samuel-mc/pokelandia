@@ -31,3 +31,10 @@ export const toggleFavorites = () => (dispatch) => {
     type: 'TOGGLE_FAVORITES',
   });
 };
+
+export const setSortBy = (sortBy) => (dispatch) => {
+  dispatch({
+    type: 'SET_SORT_BY',
+    payload: sortBy,
+  });
+};

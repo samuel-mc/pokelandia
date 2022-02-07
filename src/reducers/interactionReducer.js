@@ -2,6 +2,7 @@ const INITIAL_STATE = {
   searchParam: '',
   likedCharacters: [],
   showFavorites: false,
+  sortBy: 'default',
 };
 
 // eslint-disable-next-line default-param-last
@@ -28,6 +29,11 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         showFavorites: !state.showFavorites,
+      };
+    case 'SET_SORT_BY':
+      return {
+        ...state,
+        sortBy: action.payload,
       };
     default:
       return state;

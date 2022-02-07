@@ -21,17 +21,19 @@
     list-style: none;
 }
 
-.favorites ul > li {
+.favorites > ul > li {
     align-items: center;
     border-radius: 12px;
     box-shadow: var(--box-shadow);
+    color: var(--dark-blue);
     display: grid;
     font-size: var(--md);
     font-weight: bold;
     gap: 12px;
-    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     margin: 12px;
     text-transform: uppercase;
+    text-align: center;
     padding: 12px;
 }
 
@@ -63,10 +65,10 @@
 
 @media (min-width: 320px) {
     .favorites {
-        top: 160px;
-        height: calc(100vh - 180px);
-        width: calc(100vw - 32px);
-        left: 16px;
+        top: 12px;
+        height: calc(100vh - 24px);
+        width: calc(100vw - 16px);
+        left: 8px;
     }
 }
 

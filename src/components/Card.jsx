@@ -11,7 +11,7 @@ const Card = (props) => {
     removeFromLikedCharacters,
     character,
   } = props;
-  const { likedCharacters } = interactionReducer;
+  const { likedCharacters, sortBy } = interactionReducer;
   const isLiked = likedCharacters.includes(character);
 
   const [isShowingMore, setIsShowingMore] = React.useState(false); // Estados que controlan la visibilidad de los detalles de la carta
@@ -165,6 +165,12 @@ const Card = (props) => {
             </button>
           </div>
         </div>
+
+        <footer className="card__footer">
+          {sortBy === 'exp' && <h3>Experiencia: {character.base_experience}</h3>}
+          {sortBy === 'weight' && <h3>Peso: {character.weight}</h3>}
+          {sortBy === 'height' && <h3>Altura: {character.height}</h3>}
+        </footer>
       </div>
     </div>
   );
