@@ -41,6 +41,7 @@ const Favorites = (props) => {
           </svg>
         </button>
       </header>
+      {likedCharacters.length === 0 && <p className="favorites__empty">Aún no has agregador personajes favoritos</p>}
       <ul>
         {likedCharacters.map((character) => (
           <li key={character.id}>

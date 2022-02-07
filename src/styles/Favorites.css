@@ -63,6 +63,16 @@
     width: 28px;
 }
 
+.favorites__empty {
+    align-items: center;
+    color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    font-size: var(--md);
+    justify-content: center;
+    padding: 24px 12px;
+}
+
 @media (min-width: 320px) {
     .favorites {
         top: 12px;
