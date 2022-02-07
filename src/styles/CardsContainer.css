@@ -5,6 +5,8 @@
     grid-gap: 24px;
     justify-content: center;
     align-items: center;
+    min-height: calc(100vh - 211px);
+
 }
 
 .container__empty {

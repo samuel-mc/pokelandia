@@ -1,0 +1,14 @@
+.footer {
+    background-color: var(--red);
+    color: var(--white);
+    font-size: var(--sm);
+    padding: 12px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+.footer a {
+    color: var(--light-blue);
+    text-decoration: none;
+}

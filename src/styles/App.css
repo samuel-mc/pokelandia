@@ -40,6 +40,8 @@ html {
 .app {
     background-color: var(--light);
     position: relative;
+    min-height: 100vh;
+    
 }
 
 .stop-scrolling {

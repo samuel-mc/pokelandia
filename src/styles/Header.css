@@ -80,6 +80,9 @@
         align-items: center;
         flex-direction: column;
         padding: 4px 16px;
+        position: sticky;
+        top: 0;
+        z-index: 1;
     }
 }
 
